@@ -1,0 +1,2 @@
+# YurtKayit
+ yurtotomasyon uygulaması
