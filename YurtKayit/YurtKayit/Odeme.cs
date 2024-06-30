@@ -55,6 +55,8 @@ namespace YurtKayit
                 {
                     kalan = borc - odenen;
                     txtOgrKalan.Text = kalan.ToString();
+
+
                     SqlCommand komut = new SqlCommand("update Borc set ogrenci_borc = @p1 where ogrenci_id = @p2", sqlbgl.baglanti());
                     komut.Parameters.AddWithValue("@p1", txtOgrKalan.Text);
                     komut.Parameters.AddWithValue("@p2", txtOgrid.Text);
@@ -62,15 +64,26 @@ namespace YurtKayit
                     sqlbgl.baglanti().Close();
                     MessageBox.Show("Borç ödemesi gerçekleştirildi");
                     arama("");
+                    this.borcTableAdapter.Fill(this.yurtotomasyonDataSet2.Borc);
                 }
+                
                 else
                 {
                     MessageBox.Show("Ödenilen Değer Borçdan Büyük Olamaz!");
                 }
+                
+                
+                SqlCommand komut2 = new SqlCommand("insert into Kasa (ogrenci_id,Odeme_Ay,Odeme_Yil,Odeme_Miktar) values (@k1,@k2,@k3,@k4)", sqlbgl.baglanti());
+                komut2.Parameters.AddWithValue("@k1", txtOgrid.Text);
+                komut2.Parameters.AddWithValue("@k2", cmbAy.Text);
+                komut2.Parameters.AddWithValue("@k3", cmbYil.Text);
+                komut2.Parameters.AddWithValue("@k4", txtOgrOdenen.Text);
+                komut2.ExecuteNonQuery();
+                sqlbgl.baglanti().Close();
             }
             catch
             {
-                MessageBox.Show("Lütfen Geçerli Bir Sayı Giriniz");
+                MessageBox.Show("Ödeme Esnasında Bir Hata Oluştu");
             }
             
         }

@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OgrenciListesi));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.yurtotomasyonDataSet3 = new YurtKayit.yurtotomasyonDataSet3();
-            this.ogrenciBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ogrenciTableAdapter = new YurtKayit.yurtotomasyonDataSet3TableAdapters.OgrenciTableAdapter();
             this.ogrenciidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ogrenciisimDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ogrencisoyisimDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,9 +43,12 @@
             this.ogrenciveliisimDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ogrencivelitelefonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ogrenciveliadresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ogrenciBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.yurtotomasyonDataSet3 = new YurtKayit.yurtotomasyonDataSet3();
+            this.ogrenciTableAdapter = new YurtKayit.yurtotomasyonDataSet3TableAdapters.OgrenciTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.yurtotomasyonDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrenciBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yurtotomasyonDataSet3)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -75,20 +76,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1512, 559);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // yurtotomasyonDataSet3
-            // 
-            this.yurtotomasyonDataSet3.DataSetName = "yurtotomasyonDataSet3";
-            this.yurtotomasyonDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ogrenciBindingSource
-            // 
-            this.ogrenciBindingSource.DataMember = "Ogrenci";
-            this.ogrenciBindingSource.DataSource = this.yurtotomasyonDataSet3;
-            // 
-            // ogrenciTableAdapter
-            // 
-            this.ogrenciTableAdapter.ClearBeforeFill = true;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // ogrenciidDataGridViewTextBoxColumn
             // 
@@ -187,18 +175,33 @@
             this.ogrenciveliadresDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.ogrenciveliadresDataGridViewTextBoxColumn.Name = "ogrenciveliadresDataGridViewTextBoxColumn";
             // 
+            // ogrenciBindingSource
+            // 
+            this.ogrenciBindingSource.DataMember = "Ogrenci";
+            this.ogrenciBindingSource.DataSource = this.yurtotomasyonDataSet3;
+            // 
+            // yurtotomasyonDataSet3
+            // 
+            this.yurtotomasyonDataSet3.DataSetName = "yurtotomasyonDataSet3";
+            this.yurtotomasyonDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ogrenciTableAdapter
+            // 
+            this.ogrenciTableAdapter.ClearBeforeFill = true;
+            // 
             // OgrenciListesi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1512, 559);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "OgrenciListesi";
             this.Text = "OgrenciListesi";
             this.Load += new System.EventHandler(this.OgrenciListesi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.yurtotomasyonDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrenciBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yurtotomasyonDataSet3)).EndInit();
             this.ResumeLayout(false);
 
         }

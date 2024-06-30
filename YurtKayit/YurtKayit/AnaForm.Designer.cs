@@ -34,7 +34,6 @@
             this.ogrencilerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ogrenciEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ogrenciListesiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ogrenciDuzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bolumlerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bolumDuzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ödemelerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,7 +43,6 @@
             this.giderListesiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.istatistiklerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gelirİstatistikleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.giderİstatistikleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yöneticiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.öğrenciİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,17 +60,11 @@
             this.yurtotomasyonDataSet1 = new YurtKayit.yurtotomasyonDataSet1();
             this.ogrenciBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ogrenciTableAdapter = new YurtKayit.yurtotomasyonDataSet1TableAdapters.OgrenciTableAdapter();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ogrenciisimDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ogrencisoyisimDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ogrencitelefonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ogrenciodanoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.yurtotomasyonDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.yurtotomasyonDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.yurtotomasyonDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrenciBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -90,7 +82,7 @@
             this.erişimKolaylığıToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(807, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(742, 36);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -98,8 +90,7 @@
             // 
             this.ogrencilerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ogrenciEkleToolStripMenuItem,
-            this.ogrenciListesiToolStripMenuItem,
-            this.ogrenciDuzenleToolStripMenuItem});
+            this.ogrenciListesiToolStripMenuItem});
             this.ogrencilerToolStripMenuItem.Name = "ogrencilerToolStripMenuItem";
             this.ogrencilerToolStripMenuItem.Size = new System.Drawing.Size(117, 32);
             this.ogrencilerToolStripMenuItem.Text = "Ögrenciler";
@@ -107,22 +98,16 @@
             // ogrenciEkleToolStripMenuItem
             // 
             this.ogrenciEkleToolStripMenuItem.Name = "ogrenciEkleToolStripMenuItem";
-            this.ogrenciEkleToolStripMenuItem.Size = new System.Drawing.Size(242, 32);
+            this.ogrenciEkleToolStripMenuItem.Size = new System.Drawing.Size(224, 32);
             this.ogrenciEkleToolStripMenuItem.Text = "Ögrenci Ekle";
             this.ogrenciEkleToolStripMenuItem.Click += new System.EventHandler(this.ogrenciEkleToolStripMenuItem_Click);
             // 
             // ogrenciListesiToolStripMenuItem
             // 
             this.ogrenciListesiToolStripMenuItem.Name = "ogrenciListesiToolStripMenuItem";
-            this.ogrenciListesiToolStripMenuItem.Size = new System.Drawing.Size(242, 32);
+            this.ogrenciListesiToolStripMenuItem.Size = new System.Drawing.Size(224, 32);
             this.ogrenciListesiToolStripMenuItem.Text = "Ögrenci Listesi";
             this.ogrenciListesiToolStripMenuItem.Click += new System.EventHandler(this.ogrenciListesiToolStripMenuItem_Click);
-            // 
-            // ogrenciDuzenleToolStripMenuItem
-            // 
-            this.ogrenciDuzenleToolStripMenuItem.Name = "ogrenciDuzenleToolStripMenuItem";
-            this.ogrenciDuzenleToolStripMenuItem.Size = new System.Drawing.Size(242, 32);
-            this.ogrenciDuzenleToolStripMenuItem.Text = "Ögrenci Duzenle";
             // 
             // bolumlerToolStripMenuItem
             // 
@@ -168,18 +153,19 @@
             this.giderEkleToolStripMenuItem.Name = "giderEkleToolStripMenuItem";
             this.giderEkleToolStripMenuItem.Size = new System.Drawing.Size(224, 32);
             this.giderEkleToolStripMenuItem.Text = "Gider Ekle";
+            this.giderEkleToolStripMenuItem.Click += new System.EventHandler(this.giderEkleToolStripMenuItem_Click);
             // 
             // giderListesiToolStripMenuItem
             // 
             this.giderListesiToolStripMenuItem.Name = "giderListesiToolStripMenuItem";
             this.giderListesiToolStripMenuItem.Size = new System.Drawing.Size(224, 32);
             this.giderListesiToolStripMenuItem.Text = "Gider Listesi";
+            this.giderListesiToolStripMenuItem.Click += new System.EventHandler(this.giderListesiToolStripMenuItem_Click);
             // 
             // istatistiklerToolStripMenuItem
             // 
             this.istatistiklerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gelirİstatistikleriToolStripMenuItem,
-            this.giderİstatistikleriToolStripMenuItem});
+            this.gelirİstatistikleriToolStripMenuItem});
             this.istatistiklerToolStripMenuItem.Name = "istatistiklerToolStripMenuItem";
             this.istatistiklerToolStripMenuItem.Size = new System.Drawing.Size(120, 32);
             this.istatistiklerToolStripMenuItem.Text = "İstatistikler";
@@ -187,14 +173,9 @@
             // gelirİstatistikleriToolStripMenuItem
             // 
             this.gelirİstatistikleriToolStripMenuItem.Name = "gelirİstatistikleriToolStripMenuItem";
-            this.gelirİstatistikleriToolStripMenuItem.Size = new System.Drawing.Size(250, 32);
+            this.gelirİstatistikleriToolStripMenuItem.Size = new System.Drawing.Size(243, 32);
             this.gelirİstatistikleriToolStripMenuItem.Text = "Gelir İstatistikleri";
-            // 
-            // giderİstatistikleriToolStripMenuItem
-            // 
-            this.giderİstatistikleriToolStripMenuItem.Name = "giderİstatistikleriToolStripMenuItem";
-            this.giderİstatistikleriToolStripMenuItem.Size = new System.Drawing.Size(250, 32);
-            this.giderİstatistikleriToolStripMenuItem.Text = "Gider İstatistikleri";
+            this.gelirİstatistikleriToolStripMenuItem.Click += new System.EventHandler(this.gelirİstatistikleriToolStripMenuItem_Click);
             // 
             // yöneticiToolStripMenuItem
             // 
@@ -209,13 +190,15 @@
             // 
             this.öğrenciİşlemleriToolStripMenuItem.Name = "öğrenciİşlemleriToolStripMenuItem";
             this.öğrenciİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(248, 32);
-            this.öğrenciİşlemleriToolStripMenuItem.Text = "Öğrenci İşlemleri";
+            this.öğrenciİşlemleriToolStripMenuItem.Text = "Yönetici İşlemleri";
+            this.öğrenciİşlemleriToolStripMenuItem.Click += new System.EventHandler(this.öğrenciİşlemleriToolStripMenuItem_Click);
             // 
             // personelİşlemleriToolStripMenuItem
             // 
             this.personelİşlemleriToolStripMenuItem.Name = "personelİşlemleriToolStripMenuItem";
             this.personelİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(248, 32);
             this.personelİşlemleriToolStripMenuItem.Text = "Personel İşlemleri";
+            this.personelİşlemleriToolStripMenuItem.Click += new System.EventHandler(this.personelİşlemleriToolStripMenuItem_Click);
             // 
             // erişimKolaylığıToolStripMenuItem
             // 
@@ -305,67 +288,13 @@
             // 
             this.ogrenciTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ogrenciisimDataGridViewTextBoxColumn,
-            this.ogrencisoyisimDataGridViewTextBoxColumn,
-            this.ogrencitelefonDataGridViewTextBoxColumn,
-            this.ogrenciodanoDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.ogrenciBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 99);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(807, 349);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // ogrenciisimDataGridViewTextBoxColumn
-            // 
-            this.ogrenciisimDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ogrenciisimDataGridViewTextBoxColumn.DataPropertyName = "ogrenci_isim";
-            this.ogrenciisimDataGridViewTextBoxColumn.FillWeight = 75F;
-            this.ogrenciisimDataGridViewTextBoxColumn.HeaderText = "Öğrenci Adı";
-            this.ogrenciisimDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ogrenciisimDataGridViewTextBoxColumn.Name = "ogrenciisimDataGridViewTextBoxColumn";
-            // 
-            // ogrencisoyisimDataGridViewTextBoxColumn
-            // 
-            this.ogrencisoyisimDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ogrencisoyisimDataGridViewTextBoxColumn.DataPropertyName = "ogrenci_soyisim";
-            this.ogrencisoyisimDataGridViewTextBoxColumn.FillWeight = 75F;
-            this.ogrencisoyisimDataGridViewTextBoxColumn.HeaderText = "Öğrenci Soyadı";
-            this.ogrencisoyisimDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ogrencisoyisimDataGridViewTextBoxColumn.Name = "ogrencisoyisimDataGridViewTextBoxColumn";
-            // 
-            // ogrencitelefonDataGridViewTextBoxColumn
-            // 
-            this.ogrencitelefonDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ogrencitelefonDataGridViewTextBoxColumn.DataPropertyName = "ogrenci_telefon";
-            this.ogrencitelefonDataGridViewTextBoxColumn.FillWeight = 75F;
-            this.ogrencitelefonDataGridViewTextBoxColumn.HeaderText = "Telefon No";
-            this.ogrencitelefonDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ogrencitelefonDataGridViewTextBoxColumn.Name = "ogrencitelefonDataGridViewTextBoxColumn";
-            // 
-            // ogrenciodanoDataGridViewTextBoxColumn
-            // 
-            this.ogrenciodanoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ogrenciodanoDataGridViewTextBoxColumn.DataPropertyName = "ogrenci_odano";
-            this.ogrenciodanoDataGridViewTextBoxColumn.FillWeight = 50F;
-            this.ogrenciodanoDataGridViewTextBoxColumn.HeaderText = "Oda No";
-            this.ogrenciodanoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ogrenciodanoDataGridViewTextBoxColumn.Name = "ogrenciodanoDataGridViewTextBoxColumn";
-            // 
             // AnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(807, 453);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(742, 453);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -380,7 +309,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.yurtotomasyonDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.yurtotomasyonDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ogrenciBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -392,7 +320,6 @@
         private System.Windows.Forms.ToolStripMenuItem ogrencilerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ogrenciEkleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ogrenciListesiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ogrenciDuzenleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bolumlerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bolumDuzenleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ödemelerToolStripMenuItem;
@@ -402,7 +329,6 @@
         private System.Windows.Forms.ToolStripMenuItem giderListesiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem istatistiklerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gelirİstatistikleriToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem giderİstatistikleriToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem yöneticiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem öğrenciİşlemleriToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem personelİşlemleriToolStripMenuItem;
@@ -420,11 +346,6 @@
         private yurtotomasyonDataSet1 yurtotomasyonDataSet1;
         private System.Windows.Forms.BindingSource ogrenciBindingSource;
         private yurtotomasyonDataSet1TableAdapters.OgrenciTableAdapter ogrenciTableAdapter;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ogrenciidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ogrenciisimDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ogrencisoyisimDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ogrencitelefonDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ogrenciodanoDataGridViewTextBoxColumn;
     }
 }

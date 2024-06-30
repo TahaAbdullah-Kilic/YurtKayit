@@ -72,11 +72,18 @@ namespace YurtKayit
                 }
                 sqlbgl.baglanti().Close();
 
+                //borç oluşturma
                 SqlCommand komutkaydet2 = new SqlCommand("insert into Borc(ogrenci_id,ogrenci_ad,ogrenci_soyad) values(@b1,@b2,@b3)",sqlbgl.baglanti());
                 komutkaydet2.Parameters.AddWithValue("@b1", label12.Text);
                 komutkaydet2.Parameters.AddWithValue("@b2", TxtAd.Text);
                 komutkaydet2.Parameters.AddWithValue("@b3", TxtSoyad.Text);
                 komutkaydet2.ExecuteNonQuery();
+                sqlbgl.baglanti().Close();
+
+                //öğrenciyi odaya ekleme
+                SqlCommand komutoda = new SqlCommand("Update Odalar set oda_aktif=oda_aktif+1 where oda_no = @k1", sqlbgl.baglanti());
+                komutoda.Parameters.AddWithValue("@k1", CmbOdaNo.Text);
+                komutoda.ExecuteNonQuery();
                 sqlbgl.baglanti().Close();
             }
             catch

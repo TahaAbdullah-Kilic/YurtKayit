@@ -46,5 +46,41 @@ namespace YurtKayit
             Odeme frm = new Odeme();
             frm.Show();
         }
+
+        private void ogrenciDuzenleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OgrenciDuzenle frm = new OgrenciDuzenle();
+            frm.Show();
+        }
+
+        private void giderEkleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Giderler frm = new Giderler();
+            frm.Show();
+        }
+
+        private void giderListesiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GiderListesi frm = new GiderListesi();
+            frm.Show();
+        }
+
+        private void gelirİstatistikleriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Gelir frm = new Gelir();
+            frm.Show();
+        }
+
+        private void öğrenciİşlemleriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            YoneticiDuzenle frm = new YoneticiDuzenle();
+            frm.Show();
+        }
+
+        private void personelİşlemleriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Personel frm = new Personel();
+            frm.Show();
+        }
     }
 }

@@ -52,6 +52,10 @@
             this.txtOgrKalan = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.txtArama = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cmbAy = new System.Windows.Forms.ComboBox();
+            this.cmbYil = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.borcBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.yurtotomasyonDataSet2BindingSource)).BeginInit();
@@ -130,7 +134,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.button1.Location = new System.Drawing.Point(164, 244);
+            this.button1.Location = new System.Drawing.Point(164, 320);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(150, 40);
             this.button1.TabIndex = 1;
@@ -142,7 +146,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label1.Location = new System.Drawing.Point(40, 40);
+            this.label1.Location = new System.Drawing.Point(40, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(103, 24);
             this.label1.TabIndex = 2;
@@ -152,7 +156,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label5.Location = new System.Drawing.Point(37, 160);
+            this.label5.Location = new System.Drawing.Point(37, 158);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(106, 24);
             this.label5.TabIndex = 3;
@@ -162,7 +166,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label4.Location = new System.Drawing.Point(4, 200);
+            this.label4.Location = new System.Drawing.Point(4, 198);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(139, 24);
             this.label4.TabIndex = 4;
@@ -172,7 +176,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label2.Location = new System.Drawing.Point(27, 80);
+            this.label2.Location = new System.Drawing.Point(27, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 24);
             this.label2.TabIndex = 5;
@@ -182,7 +186,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label3.Location = new System.Drawing.Point(2, 120);
+            this.label3.Location = new System.Drawing.Point(2, 118);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(141, 24);
             this.label3.TabIndex = 6;
@@ -252,12 +256,76 @@
             this.txtArama.Size = new System.Drawing.Size(183, 28);
             this.txtArama.TabIndex = 13;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label6.Location = new System.Drawing.Point(31, 238);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(112, 24);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Ödenen Ay:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label7.Location = new System.Drawing.Point(33, 278);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(110, 24);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Ödenen Yıl:";
+            // 
+            // cmbAy
+            // 
+            this.cmbAy.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.cmbAy.FormattingEnabled = true;
+            this.cmbAy.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.cmbAy.Items.AddRange(new object[] {
+            "Ocak",
+            "Şubat",
+            "Mart",
+            "Nisan",
+            "Mayıs",
+            "Haziran",
+            "Temmuz",
+            "Ağustos",
+            "Eylül",
+            "Ekim",
+            "Kasım",
+            "Aralık"});
+            this.cmbAy.Location = new System.Drawing.Point(149, 237);
+            this.cmbAy.Name = "cmbAy";
+            this.cmbAy.Size = new System.Drawing.Size(183, 30);
+            this.cmbAy.TabIndex = 18;
+            // 
+            // cmbYil
+            // 
+            this.cmbYil.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.cmbYil.FormattingEnabled = true;
+            this.cmbYil.Items.AddRange(new object[] {
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024"});
+            this.cmbYil.Location = new System.Drawing.Point(149, 277);
+            this.cmbYil.Name = "cmbYil";
+            this.cmbYil.Size = new System.Drawing.Size(183, 30);
+            this.cmbYil.TabIndex = 19;
+            // 
             // Odeme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(944, 367);
+            this.Controls.Add(this.cmbYil);
+            this.Controls.Add(this.cmbAy);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtArama);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.txtOgrKalan);
@@ -309,5 +377,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ogrenciadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ogrencisoyadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ogrenciborcDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cmbAy;
+        private System.Windows.Forms.ComboBox cmbYil;
     }
 }
