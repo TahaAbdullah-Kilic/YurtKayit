@@ -18,14 +18,10 @@ namespace YurtKayit
         {
             InitializeComponent();
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'yurtotomasyonDataSet5.Yonetici' table. You can move, or remove it, as needed.
             this.yoneticiTableAdapter.Fill(this.yurtotomasyonDataSet5.Yonetici);
-
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             SqlCommand komut = new SqlCommand("Insert into Yonetici (yonetici_ad,yonetici_sifre) values (@p1,@p2)",sqlbgl.baglanti());

@@ -91,5 +91,20 @@ namespace YurtKayit
                 MessageBox.Show("Kaydederken Bir Hata Oluştu");
             }
         }
+
+        private void MskTc_Click(object sender, EventArgs e)
+        {
+            MskTc.SelectionStart = MskTc.Text.Length;
+        }
+
+        private void MskTel_Click(object sender, EventArgs e)
+        {
+            MskTel.SelectionStart = MskTel.Text.Length;
+        }
+
+        private void MskVeliTel_Click(object sender, EventArgs e)
+        {
+            MskVeliTel.SelectionStart = MskVeliTel.Text.Length;
+        }
     }
 }

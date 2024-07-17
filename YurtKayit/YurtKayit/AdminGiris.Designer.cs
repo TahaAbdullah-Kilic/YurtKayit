@@ -70,18 +70,19 @@
             this.txtSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txtSifre.Location = new System.Drawing.Point(163, 161);
             this.txtSifre.Name = "txtSifre";
+            this.txtSifre.PasswordChar = '*';
             this.txtSifre.Size = new System.Drawing.Size(229, 28);
             this.txtSifre.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.label3.Location = new System.Drawing.Point(33, 27);
+            this.label3.Font = new System.Drawing.Font("Segoe Print", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(43, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(403, 36);
+            this.label3.Size = new System.Drawing.Size(365, 54);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Yurt Otomasyon Giriş Sayfası";
+            this.label3.Text = "Kılıç Yurt Giriş Sayfası";
             // 
             // button1
             // 
@@ -99,7 +100,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(489, 305);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
@@ -111,6 +112,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AdminGiris";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminGiris";
             this.ResumeLayout(false);
             this.PerformLayout();

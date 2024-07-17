@@ -117,6 +117,7 @@
             this.MskTc.Size = new System.Drawing.Size(220, 28);
             this.MskTc.TabIndex = 5;
             this.MskTc.ValidatingType = typeof(int);
+            this.MskTc.Click += new System.EventHandler(this.MskTc_Click);
             // 
             // MskTel
             // 
@@ -124,10 +125,12 @@
             this.MskTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.MskTel.Location = new System.Drawing.Point(159, 128);
             this.MskTel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MskTel.Mask = "(999) 000-0000";
+            this.MskTel.Mask = "0000000000";
             this.MskTel.Name = "MskTel";
             this.MskTel.Size = new System.Drawing.Size(220, 28);
             this.MskTel.TabIndex = 7;
+            this.MskTel.ValidatingType = typeof(int);
+            this.MskTel.Click += new System.EventHandler(this.MskTel_Click);
             // 
             // label4
             // 
@@ -174,6 +177,7 @@
             // CmbBolum
             // 
             this.CmbBolum.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.CmbBolum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbBolum.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.CmbBolum.FormattingEnabled = true;
             this.CmbBolum.Location = new System.Drawing.Point(159, 196);
@@ -215,6 +219,7 @@
             // CmbOdaNo
             // 
             this.CmbOdaNo.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.CmbOdaNo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbOdaNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.CmbOdaNo.FormattingEnabled = true;
             this.CmbOdaNo.Location = new System.Drawing.Point(159, 264);
@@ -249,10 +254,12 @@
             this.MskVeliTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.MskVeliTel.Location = new System.Drawing.Point(159, 332);
             this.MskVeliTel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MskVeliTel.Mask = "(999) 000-0000";
+            this.MskVeliTel.Mask = "0000000000";
             this.MskVeliTel.Name = "MskVeliTel";
             this.MskVeliTel.Size = new System.Drawing.Size(220, 28);
             this.MskVeliTel.TabIndex = 19;
+            this.MskVeliTel.ValidatingType = typeof(int);
+            this.MskVeliTel.Click += new System.EventHandler(this.MskVeliTel_Click);
             // 
             // label9
             // 
@@ -315,6 +322,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(488, 546);
             this.Controls.Add(this.TxtAd);
@@ -343,7 +351,10 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "OgrenciKayitForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Öğrenci Kayıt";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

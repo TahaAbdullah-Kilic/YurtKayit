@@ -178,6 +178,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(546, 529);
             this.Controls.Add(this.BolumDuzenleBTN);
@@ -189,7 +190,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridBolumler);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Bolumler";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bolumler";
             this.Load += new System.EventHandler(this.Bolumler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridBolumler)).EndInit();

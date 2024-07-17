@@ -68,6 +68,7 @@
             this.TxtDiger.Name = "TxtDiger";
             this.TxtDiger.Size = new System.Drawing.Size(220, 28);
             this.TxtDiger.TabIndex = 30;
+            this.TxtDiger.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDiger_KeyPress);
             // 
             // label7
             // 
@@ -88,6 +89,7 @@
             this.TxtPersonel.Name = "TxtPersonel";
             this.TxtPersonel.Size = new System.Drawing.Size(220, 28);
             this.TxtPersonel.TabIndex = 28;
+            this.TxtPersonel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPersonel_KeyPress);
             // 
             // label6
             // 
@@ -108,6 +110,7 @@
             this.TxtGida.Name = "TxtGida";
             this.TxtGida.Size = new System.Drawing.Size(220, 28);
             this.TxtGida.TabIndex = 26;
+            this.TxtGida.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtGida_KeyPress);
             // 
             // label5
             // 
@@ -128,6 +131,7 @@
             this.Txtinternet.Name = "Txtinternet";
             this.Txtinternet.Size = new System.Drawing.Size(220, 28);
             this.Txtinternet.TabIndex = 24;
+            this.Txtinternet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txtinternet_KeyPress);
             // 
             // label4
             // 
@@ -148,6 +152,7 @@
             this.TxtDogalgaz.Name = "TxtDogalgaz";
             this.TxtDogalgaz.Size = new System.Drawing.Size(220, 28);
             this.TxtDogalgaz.TabIndex = 22;
+            this.TxtDogalgaz.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDogalgaz_KeyPress);
             // 
             // label3
             // 
@@ -168,6 +173,7 @@
             this.TxtSu.Name = "TxtSu";
             this.TxtSu.Size = new System.Drawing.Size(220, 28);
             this.TxtSu.TabIndex = 20;
+            this.TxtSu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtSu_KeyPress);
             // 
             // label2
             // 
@@ -188,6 +194,7 @@
             this.TxtElektrik.Name = "TxtElektrik";
             this.TxtElektrik.Size = new System.Drawing.Size(220, 28);
             this.TxtElektrik.TabIndex = 18;
+            this.TxtElektrik.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtElektrik_KeyPress);
             // 
             // label1
             // 
@@ -224,6 +231,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(488, 383);
             this.Controls.Add(this.Txtid);
@@ -244,7 +252,10 @@
             this.Controls.Add(this.TxtElektrik);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "GiderDuzenle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GiderDuzenle";
             this.Load += new System.EventHandler(this.GiderDuzenle_Load);
             this.ResumeLayout(false);

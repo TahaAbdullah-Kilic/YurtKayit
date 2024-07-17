@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,14 +13,15 @@ namespace YurtKayit
 {
     public partial class AnaForm : Form
     {
+        public string ad;
         public AnaForm()
         {
             InitializeComponent();
         }
         private void AnaForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'yurtotomasyonDataSet1.Ogrenci' table. You can move, or remove it, as needed.
-            this.ogrenciTableAdapter.Fill(this.yurtotomasyonDataSet1.Ogrenci);
+            timer1.Start();
+            label4.Text = ad;
 
         }
 
@@ -81,6 +83,12 @@ namespace YurtKayit
         {
             Personel frm = new Personel();
             frm.Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToLongTimeString();
+            label2.Text = DateTime.Now.ToLongDateString();
         }
     }
 }

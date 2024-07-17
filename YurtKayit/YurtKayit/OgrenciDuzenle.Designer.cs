@@ -132,6 +132,7 @@
             // CmbOdaNo
             // 
             this.CmbOdaNo.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.CmbOdaNo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbOdaNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.CmbOdaNo.FormattingEnabled = true;
             this.CmbOdaNo.Location = new System.Drawing.Point(158, 298);
@@ -173,6 +174,7 @@
             // CmbBolum
             // 
             this.CmbBolum.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.CmbBolum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbBolum.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.CmbBolum.FormattingEnabled = true;
             this.CmbBolum.Location = new System.Drawing.Point(158, 230);
@@ -290,7 +292,6 @@
             // 
             this.btn1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btn1.Image = global::YurtKayit.Properties.Resources.icons8_save_button_48;
             this.btn1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn1.Location = new System.Drawing.Point(102, 500);
             this.btn1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -298,7 +299,6 @@
             this.btn1.Size = new System.Drawing.Size(135, 59);
             this.btn1.TabIndex = 46;
             this.btn1.Text = "Düzenle";
-            this.btn1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn1.UseVisualStyleBackColor = false;
             this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
@@ -341,8 +341,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(719, 571);
+            this.ClientSize = new System.Drawing.Size(564, 571);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Txtid);
             this.Controls.Add(this.label12);
@@ -370,7 +371,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "OgrenciDuzenle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OgrenciDuzenle";
             this.Load += new System.EventHandler(this.OgrenciDuzenle_Load);
             this.ResumeLayout(false);

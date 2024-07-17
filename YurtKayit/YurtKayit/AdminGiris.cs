@@ -28,8 +28,10 @@ namespace YurtKayit
             if (oku.Read()) 
             {
                 AnaForm frm = new AnaForm();
+                frm.ad = txtKullaniciAd.Text;
                 frm.Show();
                 this.Hide();
+                
             }
             else
             {

@@ -278,6 +278,7 @@
             // 
             // cmbAy
             // 
+            this.cmbAy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAy.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.cmbAy.FormattingEnabled = true;
             this.cmbAy.ImeMode = System.Windows.Forms.ImeMode.Off;
@@ -301,6 +302,7 @@
             // 
             // cmbYil
             // 
+            this.cmbYil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbYil.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.cmbYil.FormattingEnabled = true;
             this.cmbYil.Items.AddRange(new object[] {
@@ -320,6 +322,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(944, 367);
             this.Controls.Add(this.cmbYil);
@@ -341,7 +344,10 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Odeme";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Odeme";
             this.Load += new System.EventHandler(this.Odeme_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

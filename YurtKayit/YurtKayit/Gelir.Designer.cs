@@ -65,6 +65,7 @@
             // 
             // cmbAy
             // 
+            this.cmbAy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAy.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.cmbAy.Location = new System.Drawing.Point(105, 77);
             this.cmbAy.Name = "cmbAy";
@@ -129,6 +130,7 @@
             // 
             // cmbYil
             // 
+            this.cmbYil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbYil.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.cmbYil.Location = new System.Drawing.Point(105, 33);
             this.cmbYil.Name = "cmbYil";
@@ -153,7 +155,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPara);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Gelir";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gelir";
             this.Load += new System.EventHandler(this.Gelir_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Chart)).EndInit();

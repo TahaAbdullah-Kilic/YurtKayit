@@ -27,6 +27,11 @@ namespace YurtKayit
             komutoda.Parameters.AddWithValue("@k1", CmbOdaNo.Text);
             komutoda.ExecuteNonQuery();
             sqlbgl.baglanti().Close();
+
+            SqlCommand komutborc = new SqlCommand("delete from Borc where @p1 = ogrenci_id", sqlbgl.baglanti());
+            komut.Parameters.AddWithValue("@a1", Txtid.Text);
+            komut.ExecuteNonQuery();
+            sqlbgl.baglanti().Close();
         }
 
         SqlBaglanti sqlbgl = new SqlBaglanti();
